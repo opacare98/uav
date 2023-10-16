@@ -9,6 +9,9 @@ Created on Mon Sep 25 08:42:59 2023
 from ultralytics import YOLO
 import cv2
 import time
+import torch.distributed as dist
+
+dist.init_process_group('gloo', init_method='file:///temp/somefile', rank=0, world_size=1)
 
 # Load the model.
 model = YOLO('yolov8n.pt')
