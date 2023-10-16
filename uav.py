@@ -15,7 +15,8 @@ model = YOLO('yolov8n.pt')
  
 # Training.
 results = model.train(
-   data='uav.yaml',
+   #data='uav.yaml',
+   data='/root/code/uav.yaml',
    imgsz=640,
    epochs=10,
    batch=5,
