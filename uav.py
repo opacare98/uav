@@ -11,7 +11,7 @@ import cv2
 import time
 import torch.distributed as dist
 
-dist.init_process_group('gloo', #init_method='file:///mnt/data/uav-dataset', 
+dist.init_process_group('mpi', #init_method='file:///mnt/data/uav-dataset', 
                         rank=0, world_size=1)
 
 # Load the model.
